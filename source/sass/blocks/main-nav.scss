@@ -1,0 +1,21 @@
+.main-nav {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.main-nav__head {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  height: 56px;
+}
+
+.main-nav__logo {
+  position: absolute;
+  left: 50%;
+
+  transform: translateX(-50%);
+}

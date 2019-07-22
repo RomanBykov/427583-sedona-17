@@ -3,33 +3,37 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
+  <body class="page-body">
     <header class="page-header">
-      <a class="page-header__logo" href="#">
-        <img class="page-header__logo-image" src="http://placehold.it/150x100" alt="Логотип Седона">
-      </a>
       <nav class="main-nav">
-        <button class="main-nav__btn" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
+        <div class="main-nav__head">
+          <a class="main-nav__logo" href="#">
+            <img class="main-nav__logo-image" src="img/logo-sedona-mobile.svg" alt="Логотип Седона">
+          </a>
+          <button class="main-nav__btn" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+        </div>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
             <li class="site-list__item">
-              <a>Главная</a>
+              <a class="site-list__link title title--white" href="index.html">Главная</a>
             </li>
             <li class="site-list__item">
-              <a href="#">Фото и видео</a>
+              <a class="site-list__link title title--white" href="photos.html">Фото и видео</a>
             </li>
             <li class="site-list__item">
-              <a href="#">Форма отзыва</a>
+              <a class="site-list__link title title--white">Форма отзыва</a>
             </li>
             <li class="site-list__item">
-              <a href="#">HTML Academy</a>
+              <a class="site-list__link title title--white" href="#">HTML Academy</a>
             </li>
           </ul>
         </div>
       </nav>
+      <div class="page-header__background"></div>
     </header>
     <main clas="page-main">
       <h1 class="visually-hidden">Добро пожаловать в Седону</h1>
@@ -39,7 +43,7 @@
       </section>
       <form class="form" action="https://echo.htmlacademy.ru" method="post">
         <fieldset class="form__fieldset">
-          <legend class="form__legend">Представьтесь:</legend>
+          <legend class="form__legend title">Представьтесь:</legend>
           <label class="form__label" for="user-name">Имя*:</label>
           <input class="form__input" type="text" name="user-name" id="user-name" placeholder="Петр" required>
           <label class="form__label" for="user-surname">Фамилия*:</label>
@@ -48,14 +52,14 @@
           <input class="form__input" type="text" name="user-patronymic" id="user-patronymic" placeholder="Александрович">
         </fieldset>
         <fieldset class="form__fieldset">
-          <legend class="form__legend">Контактная информация:</legend>
+          <legend class="form__legend title">Контактная информация:</legend>
           <label class="form__label" for="user-tel">Контактный телефон*:</label>
           <input class="form__input" type="tel" name="user-tel" id="user-tel" placeholder="Введите телефон" required>
           <label class="form__label" for="user-email">Электронная почта*:</label>
           <input class="form__input" type="email" name="user-email" id="user-email" placeholder="Введите e-mail" required>
         </fieldset>
         <fieldset class="form__fieldset">
-          <legend class="form__legend">Ваше общее впечатление:</legend>
+          <legend class="form__legend title">Ваше общее впечатление:</legend>
           <label class="form__label" for="rating-good">Скорее положительное</label>
           <input class="form__input" type="radio" name="rating" value="good" id="rating-good">
           <label class="form__label" for="rating-bad">Скорее отрицательное</label>
@@ -64,7 +68,7 @@
           <input class="form__input" type="radio" name="rating" value="none" id="rating-none">
         </fieldset>
         <fieldset class="form__fieldset">
-          <legend class="form__legend">Посещенные достопримечательности:</legend>
+          <legend class="form__legend title">Посещенные достопримечательности:</legend>
           <label class="form__label" for="sight-devils-bridge">Мост Дьявола</label>
           <input class="form__input" type="checkbox" name="sight" value="devils-bridge" id="sight-devils-bridge">
           <label class="form__label" for="sight-mountain bell">Гора-Колокол</label>
@@ -76,29 +80,32 @@
         </fieldset>
         <fieldset class="form__fieldset">
           <label class="form__label" for="feedback">Опишите свои эмоции:</label>
-          <textarea class="form__feedback" name="feedback" id="feedback" cols="30" rows="10" placeholder="Опишите подробно все свои восторги"></textarea>
+          <textarea class="form__feedback title" name="feedback" id="feedback" cols="30" rows="10" placeholder="Опишите подробно все свои восторги"></textarea>
         </fieldset>
         <button class="form__submit-btn button" type="submit">Отправить отзыв</button>
       </form>
     </main>
     <footer class="page-footer">
       <div class="page-footer__wrapper">
-        <a href="#">#visitsedona</a>
+        <a class="page-footer__hashtag title" href="#">#visitsedona</a>
         <div class="page-footer__social social">
           <ul class="social__list">
             <li class="social__item">
               <a class="social__link" href="#">
                 <span class="visually-hidden">Седона в Twitter</span>
+                <img src="img/icon-twitter.svg" alt="">
               </a>
             </li>
             <li class="social__item">
               <a class="social__link" href="#">
                 <span class="visually-hidden">Седона в Facebook</span>
+                <img src="img/icon-facebook.svg" alt="">
               </a>
             </li>
             <li class="social__item">
               <a class="social__link" href="#">
                 <span class="visually-hidden">Седона в Youtube</span>
+                <img src="img/icon-youtube.svg" alt="">
               </a>
             </li>
           </ul>
@@ -107,7 +114,7 @@
           <b class="copyright__text">Разработано</b>
           <a class="copyright__link" href="#">
             <span class="visually-hidden">HTML Academy</span>
-            <img class="copyright__logo" src="http://placehold.it/150x100" alt="Логотип HTML Academy">
+            <img class="copyright__logo" src="img/logo-htmlacademy.svg" alt="Логотип HTML Academy">
           </a>
         </div>
       </div>

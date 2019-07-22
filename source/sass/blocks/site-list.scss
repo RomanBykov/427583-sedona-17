@@ -1,0 +1,18 @@
+.site-list {
+  background-color: $blue;
+}
+
+.site-list__link {
+  display: inline-block;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 18px;
+
+  text-align: center;
+  vertical-align: middle;
+
+  box-shadow:
+    0 1px 0 0 rgba(1, 1, 1, 0.2),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.2);
+  box-sizing: border-box;
+}
