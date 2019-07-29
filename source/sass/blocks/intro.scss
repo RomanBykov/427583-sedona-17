@@ -4,4 +4,9 @@
 
 .intro__text-wrapper {
   padding: 43px 27px 45px 28px;
+
+  @media (min-width: $desktop) {
+    width: 580px;
+    margin: 0 auto;
+  }
 }

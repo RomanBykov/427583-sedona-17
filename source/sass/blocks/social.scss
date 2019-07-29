@@ -1,4 +1,6 @@
 .social__list {
+  @include reset-list;
+
   display: flex;
   justify-content: center;
 }
@@ -14,4 +16,18 @@
   margin: 0 3px;
 
   background-color: $blue;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.social__link--twitter {
+  background-image: url("../../img/icon-twitter.svg");
+}
+
+.social__link--fb {
+  background-image: url("../../img/icon-facebook.svg");
+}
+
+.social__link--youtube {
+  background-image: url("../../img/icon-youtube.svg");
 }
