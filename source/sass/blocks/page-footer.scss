@@ -1,0 +1,12 @@
+.page-footer__wrapper {
+  @media (min-width: $pad) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 36px 60px;
+  }
+}
+
+.page-footer__hashtag {
+  color: $black;
+}

@@ -1,0 +1,16 @@
+.album {
+  @media (min-width: $pad) {
+    display: flex;
+    width: 648px;
+    flex-wrap: wrap;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $desktop) {
+    width: 100%;
+  }
+}
+
+.album__post:nth-child(1) {
+  margin: 0 auto;
+}

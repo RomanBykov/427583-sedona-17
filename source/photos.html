@@ -4,25 +4,25 @@
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
   </head>
   <body class="page-body">
-    <header class="page-header">
-      <nav class="main-nav">
-        <div class="main-nav__head">
-          <a class="main-nav__logo" href="#">
-            <img class="main-nav__logo-image" src="img/logo-sedona-mobile.svg" alt="Логотип Седона">
-          </a>
+      <header class="page-header">
+        <nav class="main-nav">
           <button class="main-nav__btn" type="button">
-            <span class="visually-hidden">Открыть меню</span>
+            <span class="visually-hidden">Открыть/закрыть меню</span>
           </button>
-        </div>
-        <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
             <li class="site-list__item">
               <a class="site-list__link title title--white" href="index.html">Главная</a>
             </li>
             <li class="site-list__item">
               <a class="site-list__link title title--white">Фото и видео</a>
+            </li>
+            <li class="site-list__item site-list__item--logo">
+              <a class="site-list__link site-list__link--logo main-logo" href="#">
+                <img class="main-logo__image" src="img/logo-sedona-mobile.svg" alt="Логотип Седона">
+              </a>
             </li>
             <li class="site-list__item">
               <a class="site-list__link title title--white" href="form.html">Форма отзыва</a>
@@ -31,9 +31,8 @@
               <a class="site-list__link title title--white" href="#">HTML Academy</a>
             </li>
           </ul>
-        </div>
-      </nav>
-      <div class="page-header__background"></div>
+        </nav>
+        <div class="page-header__background"></div>
     </header>
     <main clas="page-main">
       <h1 class="visually-hidden">Добро пожаловать в Седону</h1>
@@ -46,14 +45,18 @@
       <section class="album">
         <div class="album__post post">
           <div class="post__image-container">
-            <img class="post__image" src="img/photo-sunset-mobile@1x.jpg" alt="Фотография туриста">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-sunset-desktop@1x.jpg">
+              <source media="(min-width: 768px)" srcset="img/photo-sunset-tablet@1x.jpg">
+              <img class="post__image" src="img/photo-sunset-mobile@1x.jpg" alt="Фотография туриста">
+            </picture>
           </div>
           <div class="post__text-wrapper">
             <h2 class="post__title title">Неродные просторы</h2>
             <p class="post__author">Автор фото: <cite class="post__author-name">Борис</cite></p>
           </div>
           <div class="post__like">
-            <button class="post__like-btn">
+            <button class="post__like-btn like-btn">
               <span class="visually-hidden">Поставить лайк</span>
             </button>
             <p class="post__like-counter">1350<span class="visually-hidden"> отметки "нравится"</span></p>
@@ -61,14 +64,20 @@
         </div>
         <div class="album__post post">
           <div class="post__image-container">
-            <img class="post__image" src="img/photo-cactus-mobile@1x.jpg" alt="Фотография туриста">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-cactus-desktop@1x.jpg">
+              <source media="(min-width: 768px)" srcset="img/photo-cactus-tablet@1x.jpg">
+              <img class="post__image" src="img/photo-cactus-mobile@1x.jpg" alt="Фотография туриста">
+            <!--  -->
+                <!-- <img class="post__image" src="img/photo-sunset-mobile@1x.jpg" alt="Фотография туриста"> -->
+            </picture>
           </div>
           <div class="post__text-wrapper">
             <h2 class="post__title title">Местная растительность</h2>
             <p class="post__author">Автор фото: <cite class="post__author-name">Сергей</cite></p>
           </div>
           <div class="post__like">
-            <button class="post__like-btn">
+            <button class="post__like-btn like-btn">
               <span class="visually-hidden">Поставить лайк</span>
             </button>
             <p class="post__like-counter">143<span class="visually-hidden"> отметки "нравится"</span></p>
@@ -76,14 +85,20 @@
         </div>
         <div class="album__post post">
           <div class="post__image-container">
-            <img class="post__image" src="img/photo-roads-mobile@1x.jpg" alt="Фотография туриста">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-roads-desktop@1x.jpg">
+              <source media="(min-width: 768px)" srcset="img/photo-roads-tablet@1x.jpg">
+              <img class="post__image" src="img/photo-roads-mobile@1x.jpg" alt="Фотография туриста">
+
+                <!-- <img class="post__image" src="img/photo-sunset-mobile@1x.jpg" alt="Фотография туриста"> -->
+            </picture>
           </div>
           <div class="post__text-wrapper">
             <h2 class="post__title title">Дорога на север</h2>
             <p class="post__author">Автор фото: <cite class="post__author-name">Петр</cite></p>
           </div>
           <div class="post__like">
-            <button class="post__like-btn">
+            <button class="post__like-btn like-btn">
               <span class="visually-hidden">Поставить лайк</span>
             </button>
             <p class="post__like-counter">96<span class="visually-hidden"> отметки "нравится"</span></p>
@@ -91,14 +106,20 @@
         </div>
         <div class="album__post post">
           <div class="post__image-container">
-            <img class="post__image" src="img/photo-bridge-mobile@1x.jpg" alt="Фотография туриста">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-bridge-desktop@1x.jpg">
+              <source media="(min-width: 768px)" srcset="img/photo-bridge-tablet@1x.jpg">
+              <img class="post__image" src="img/photo-bridge-mobile@1x.jpg" alt="Фотография туриста">
+
+                <!-- <img class="post__image" src="img/photo-sunset-mobile@1x.jpg" alt="Фотография туриста"> -->
+            </picture>
           </div>
           <div class="post__text-wrapper">
             <h2 class="post__title title">Мост Дьявола</h2>
             <p class="post__author">Автор фото: <cite class="post__author-name">Антон</cite></p>
           </div>
           <div class="post__like">
-            <button class="post__like-btn">
+            <button class="post__like-btn like-btn">
               <span class="visually-hidden">Поставить лайк</span>
             </button>
             <p class="post__like-counter">254<span class="visually-hidden"> отметки "нравится"</span></p>
@@ -110,10 +131,15 @@
           <h2 class="promo__title title">Все еще сомневаетесь?</h2>
           <p class="promo__text">Смотрите видео презентацию и скорее за билетами, пока они не подоражали в очередной раз!</p>
         </div>
-        <div class="promo__video">
-            <video>
+        <div class="promo__video video-player">
+          <div class="video-player__screen">
+            <!-- <video>
               <source src="URL">
-            </video>
+            </video> -->
+          </div>
+          <div class="video-player__controls">
+
+          </div>
         </div>
       </section>
     </main>
@@ -123,21 +149,18 @@
         <div class="page-footer__social social">
           <ul class="social__list">
             <li class="social__item">
-              <a class="social__link" href="#">
+              <a class="social__link social__link--twitter" href="#">
                 <span class="visually-hidden">Седона в Twitter</span>
-                <img src="img/icon-twitter.svg" alt="">
               </a>
             </li>
             <li class="social__item">
-              <a class="social__link" href="#">
+              <a class="social__link social__link--fb" href="#">
                 <span class="visually-hidden">Седона в Facebook</span>
-                <img src="img/icon-facebook.svg" alt="">
               </a>
             </li>
             <li class="social__item">
-              <a class="social__link" href="#">
+              <a class="social__link social__link--youtube" href="#">
                 <span class="visually-hidden">Седона в Youtube</span>
-                <img src="img/icon-youtube.svg" alt="">
               </a>
             </li>
           </ul>

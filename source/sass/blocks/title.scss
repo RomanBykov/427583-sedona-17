@@ -1,12 +1,10 @@
 .title {
+  margin: 0;
+
   font-family: $ptsans-bold;
   font-size: 18px;
   line-height: 1.44;
-  color: $black;
   font-weight: 700;
   text-transform: uppercase;
-}
-
-.title--white {
-  color: $white;
+  // text-align: center;
 }

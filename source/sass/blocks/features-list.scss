@@ -1,0 +1,24 @@
+.features-list {
+  @include reset-list;
+
+  @media (min-width: $pad) {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+
+    box-sizing: border-box;
+  }
+}
+
+.features-list__item {
+  padding: 61px 27px 45px 28px;
+
+  @media (min-width: $pad) {
+    width: 256px;
+  }
+
+  @media (min-width: $desktop) {
+    min-width: 400px;
+  }
+}
