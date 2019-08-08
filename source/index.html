@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
     <meta name="viewport" content="width=device-width,initial-scale=1">
   </head>
   <body class="page-body">
@@ -12,12 +13,12 @@
         <button class="main-nav__btn" type="button">
           <span class="visually-hidden">Открыть/закрыть меню</span>
         </button>
-        <ul class="main-nav__list site-list">
+        <ul class="main-nav__list site-list site-list--closed">
           <li class="site-list__item">
-            <a class="site-list__link title title--white">Главная</a>
+            <a class="site-list__link title title--small">Главная</a>
           </li>
           <li class="site-list__item">
-            <a class="site-list__link title title--white" href="photos.html">Фото и видео</a>
+            <a class="site-list__link title title--small" href="photos.html">Фото и видео</a>
           </li>
           <li class="site-list__item site-list__item--logo">
             <a class="site-list__link site-list__link--logo main-logo" href="#">
@@ -25,10 +26,10 @@
             </a>
           </li>
           <li class="site-list__item">
-            <a class="site-list__link title title--white" href="form.html">Форма отзыва</a>
+            <a class="site-list__link title title--small" href="form.html">Форма отзыва</a>
           </li>
           <li class="site-list__item">
-            <a class="site-list__link title title--white" href="#">HTML Academy</a>
+            <a class="site-list__link title title--small" href="#">HTML Academy</a>
           </li>
         </ul>
       </nav>
@@ -47,7 +48,7 @@
           <div class="advantages__description advantage advantage--white-text">
             <h2 class="advantage__title title title--white">Настояющий городок</h2>
             <p class="advantage__number">№1</p>
-            <p class="advantage__text">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+            <p class="advantage__text">Седона не аттракцион для туристов, там течёт своя жизнь</p>
           </div>
           <div class="advantages__image-container">
             <img class="advantages__image" src="img/main-city-mobile@1x.jpg" alt="Отель в Седоне">
@@ -56,22 +57,22 @@
         <div class="advantages__wrapper">
           <ul class="advantages__description features-list">
             <li class="features-list__item features-list__item--housing">
-              <h2 class="advantage__title title">Жилье</h2>
-              <p class="advantage__text">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+              <h2 class="features-list__title title">Жилье</h2>
+              <p class="features-list__text">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
             </li>
-            <li class="features-list__item features-list__item--souvenirs">
-              <h2 class="advantage__title title">Сувениры</h2>
-              <p class="advantage__text">Не только китайского, но и местного производства!</p>
+            <li class="features-list__item features-list__item--gift">
+              <h2 class="features-list__title title">Сувениры</h2>
+              <p class="features-list__text">Не только китайского, но и местного производства!</p>
             </li>
             <li class="features-list__item features-list__item--food">
-              <h2 class="advantage__title title">Еда</h2>
-              <p class="advantage__text">Всегда заказывайте ФИРМЕННЫЙ БУРГЕР, Вы НЕ разочаруетесь!</p>
+              <h2 class="features-list__title title">Еда</h2>
+              <p class="features-list__text">Всегда заказывайте ФИРМЕННЫЙ БУРГЕР, Вы НЕ разочаруетесь!</p>
             </li>
           </ul>
         </div>
         <div class="advantages__wrapper advantages__wrapper--blue">
-          <div class="advantages__description advantage advantage--white-text">
-            <h2 class="advantage__title title title--white">Там есть мост Дьявола</h2>
+          <div class="advantages__description advantages__description--2nd advantage advantage--white-text">
+            <h2 class="advantage__title advantage__title--2nd title title--white">Там есть мост Дьявола</h2>
             <p class="advantage__number">№2</p>
             <p class="advantage__text">Да, по нему можно пройти! Если Вы осмелитесь, конечно!</p>
           </div>
@@ -80,18 +81,18 @@
           </div>
         </div>
         <div class="advantages__wrapper advantages__wrapper--grey">
-          <ul class="advantages__description features-list">
-            <li class="features-list__item advantage">
+          <ul class="advantages__description features-list features-list--last-list">
+            <li class="features-list__item features-list__item--center advantage">
               <h2 class="advantage__title title">Небольшая площадь</h2>
               <p class="advantage__number">№3</p>
               <p class="advantage__text">Все интересные места находятся очень близко</p>
             </li>
-            <li class="features-list__item advantage">
+            <li class="features-list__item features-list__item--center advantage">
               <h2 class="advantage__title title">Красивая дорога</h2>
               <p class="advantage__number">№4</p>
               <p class="advantage__text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
             </li>
-            <li class="features-list__item advantage">
+            <li class="features-list__item features-list__item--center advantage">
               <h2 class="advantage__title title">Мало туристов</h2>
               <p class="advantage__number">№5</p>
               <p class="advantage__text">Большинство едет в Гранд Каньон и толпится там</p>
@@ -100,10 +101,12 @@
         </div>
       </section>
       <section class="search">
-        <h2 class="search__title title">Заинтересовались?</h2>
-        <p class="search__text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-        <button class="search__btn button" type="button">Найти гостиницу</button>
-        <div class="search__modal modal"></div>
+        <div class="search__wrapper">
+          <h2 class="search__title title title--large">Заинтересовались?</h2>
+          <p class="search__text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+          <button class="search__btn button" type="button">Найти гостиницу</button>
+          <div class="search__modal modal"></div>
+        </div>
       </section>
       <section class="map">
         <div class="map__image-wrapper">
@@ -113,7 +116,7 @@
     </main>
     <footer class="page-footer">
       <div class="page-footer__wrapper">
-        <a class="page-footer__hashtag title" href="#">#visitsedona</a>
+        <a class="page-footer__hashtag title title--big" href="#">#visitsedona</a>
         <div class="page-footer__social social">
           <ul class="social__list">
             <li class="social__item">
@@ -142,5 +145,13 @@
         </div>
       </div>
     </footer>
+    <script>
+      var menuBtn = document.querySelector('.main-nav__btn');
+      var menuList = document.querySelector('.site-list');
+      menuBtn.addEventListener('click', function () {
+        menuList.classList.toggle('site-list--closed');
+        menuBtn.classList.toggle('main-nav__btn--close');
+      });
+    </script>
   </body>
 </html>

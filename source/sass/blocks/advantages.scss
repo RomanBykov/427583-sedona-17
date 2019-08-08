@@ -13,11 +13,18 @@
 }
 
 .advantages__description {
-  padding: 61px 27px 45px 28px;
+  padding: 40px 15px 39px;
 
   @media (min-width: $pad) {
     width: 256px;
     padding-top: 46px;
+  }
+}
+
+.advantages__description--2nd {
+  @media (min-width: $pad) {
+    order: 1;
+    padding: 45px 48px 39px;
   }
 }
 
@@ -29,6 +36,10 @@
   height: 260px;
 
   overflow: hidden;
+
+  @media (min-width: $pad) {
+    height: 256px;
+  }
 }
 
 .advantages__image {

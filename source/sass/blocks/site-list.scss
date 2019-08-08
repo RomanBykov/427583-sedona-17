@@ -34,6 +34,7 @@
   @media (min-width: $pad) {
     width: 153px;
 
+    font-size: 18px;
     color: $black;
     border: none;
   }
@@ -50,14 +51,42 @@
   background-color: $white;
   border: none;
 
+  @media (min-width: $pad) {
+    width: 156px;
+  }
+
   @media (min-width: $desktop) {
     // display: flexsnt: center;
     width: 244px;
   }
 }
 
+.site-list__item {
+  flex-shrink: 0;
+  flex-grow: 1;
+}
+
 .site-list__item--logo {
   order: 1;
+
+  background-color: $white;
+
+  @media (min-width: $pad) {
+    order: 0;
+  }
+}
+
+.site-list--closed .site-list__item {
+  display: none;
+
+  @media (min-width: $pad) {
+    display: block;
+  }
+}
+
+.site-list--closed .site-list__item--logo {
+  order: 1;
+  display: block;
 
   background-color: $white;
 

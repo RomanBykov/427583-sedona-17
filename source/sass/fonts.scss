@@ -3,7 +3,7 @@
   font-family: "PT Sans";
   font-style: normal;
   font-display: swap;
-  src: local("PT Sans");
+  // src: local("PT Sans");
   src: url("../fonts/ptsans.woff2"),
     url("../fonts/ptsans.woff");
 }
@@ -13,7 +13,7 @@
   font-family: "PT Sans Bold";
   font-style: normal;
   font-display: swap;
-  src: local("PT Sans Bold");
+  // src: local("PT Sans Bold");
   src: url("../fonts/ptsansbold.woff2"),
     url("../fonts/ptsansbold.woff");
 }

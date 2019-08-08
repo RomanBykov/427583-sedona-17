@@ -41,6 +41,8 @@
   background-position: 50% 50%;
   border: none;
 
+  transition: all 0.3s ease-in;
+
   @media (min-width: $pad) {
     display: none;
   }
@@ -51,4 +53,11 @@
   bottom: unset;
 
   background-image: url("../../img/icon-cross.svg");
+
+  transition: all 0.3s ease-in;
+}
+
+
+.main-nav__list {
+  display: none;
 }

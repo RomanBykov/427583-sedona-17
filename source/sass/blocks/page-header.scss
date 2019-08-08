@@ -12,6 +12,12 @@
   background-position-x: center;
   background-repeat: no-repeat;
   background-size: cover;
+
+  @media (min-width: $pad) {
+    height: 518px;
+
+    background-image: url("../../img/bg-back-tablet@1x.jpg");
+  }
 }
 
 .page-header__background::after {
@@ -32,4 +38,35 @@
   background-size: cover;
   background-position: 50% 100%;
   background-repeat: no-repeat;
+
+  @media (min-width: $pad) {
+    height: 57px;
+
+    background-image: url("../../img/bg-intro-triangle-tablet.svg");
+  }
+}
+
+.page-header__background::before {
+  content: "";
+  position: absolute;
+  top: 90px;
+  left: 50%;
+
+  width: 281px;
+  height: 214px;
+
+  background-image: url("../../img/text-index-svg.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  transform: translateX(-50%);
+
+  @media (min-width: $pad) {
+    top: 77px;
+
+    width: 460px;
+    height: 350px;
+
+    // background-image: url("../../img/.svg");
+  }
 }
