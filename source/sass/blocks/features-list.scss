@@ -1,24 +1,132 @@
+.features-list__title,
+.features-list__text {
+  margin: 0;
+}
+
 .features-list {
   @include reset-list;
+  width: auto;
+  margin: 0 auto;
+  padding: 6px 20px 38px;
+
+  box-sizing: border-box;
 
   @media (min-width: $pad) {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 100%;
     margin: 0 auto;
+    padding: 159px 0 62px;
+  }
+}
 
-    box-sizing: border-box;
+.features-list--last-list {
+  padding: 6px 31px 28px;
+
+  @media (min-width: $pad) {
+    padding: 25px 0 10px;
   }
 }
 
 .features-list__item {
-  padding: 61px 27px 45px 28px;
+  position: relative;
+
+  padding-left: 50px;
+
+  text-align: left;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 40px;
+    height: 40px;
+
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+  }
 
   @media (min-width: $pad) {
-    width: 256px;
+    width: 163px;
+    padding: 0;
+
+    text-align: center;
   }
 
   @media (min-width: $desktop) {
     min-width: 400px;
   }
+}
+
+.features-list--last-list .features-list__item::before {
+  content: none;
+}
+
+.features-list__item--gift {
+  @media (min-width: $pad) {
+    order: 1;
+    // width: 163px;
+  }
+}
+
+.features-list__item--housing::before {
+  top: -8px;
+  left: 2px;
+
+  width: 37px;
+  height: 36px;
+
+  background-image: url("../../img/icon-house.svg");
+}
+
+.features-list__item--food::before {
+  top: -4px;
+  left: -2px;
+
+  width: 40px;
+  height: 35px;
+
+  background-image: url("../../img/icon-burger.svg");
+}
+
+.features-list__item--gift::before {
+  top: -10px;
+  left: 5px;
+
+  width: 32px;
+  height: 38px;
+
+  background-image: url("../../img/icon-gift.svg");
+}
+
+.features-list--last-list .features-list__item {
+  width: 159px;
+}
+
+.features-list__item--center {
+  margin-top: 20px;
+  padding: 0;
+  padding-bottom: 35px;
+  text-align: center;
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+}
+
+.features-list__title {
+  margin-top: 29px;
+  margin-bottom: 14px;
+
+  @media (min-width: $pad) {
+    margin-top: 0;
+    margin-bottom: 22px;
+  }
+}
+
+.features-list__text {
+  text-transform: uppercase;
 }

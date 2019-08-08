@@ -1,13 +1,13 @@
 .button {
   display: inline-flex;
   justify-content: center;
-  // width: 100%;
-  width: auto;
-  padding: 17px 15px 18px;
+  width: 100%;
+  // width: auto;
+  padding: 16px 15px 18px;
 
   font-family: $ptsans-bold;
   font-size: 21px;
-  line-height: 1.24;
+  line-height: 24px;
   font-weight: 700;
   vertical-align: middle;
   color: $white;

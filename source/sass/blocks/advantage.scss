@@ -1,5 +1,6 @@
 .advantage__number,
-.advantage__text {
+.advantage__text,
+.advantage__title {
   margin: 0;
 }
 
@@ -11,10 +12,54 @@
   flex-shrink: 0;
 
   @media (min-width: $pad) {
-    min-width: 256px;
+    // min-width: 256px;
   }
 
   @media (min-width: $desktop) {
     min-width: 400px;
+  }
+}
+
+.advantage__title {
+  margin-bottom: 9px;
+
+  @media (min-width: $pad) {
+    margin-bottom: 11px;
+  }
+}
+
+.advantage__title--2nd {
+  @media (min-width: $pad) {
+    padding: 0 4.5px;
+  }
+}
+
+.advantage__text {
+  text-transform: uppercase;
+}
+
+.advantage__number {
+  position: relative;
+
+  display: inline-block;
+  width: auto;
+
+  margin-bottom: 16px;
+
+  &::before,
+  &::after {
+    content: "—";
+    position: absolute;
+    top: 0;
+    left: -15px;
+  }
+
+  &::after {
+    left: unset;
+    right: -15px;
+  }
+
+  @media (min-width: $pad) {
+    margin-bottom: 21px;
   }
 }

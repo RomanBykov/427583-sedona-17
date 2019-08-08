@@ -1,4 +1,7 @@
 .page-footer__wrapper {
+  padding-top: 34px;
+  padding-bottom: 23px;
+
   @media (min-width: $pad) {
     display: flex;
     justify-content: space-between;
@@ -8,5 +11,21 @@
 }
 
 .page-footer__hashtag {
+  display: block;
+  margin-bottom: 39px;
+
   color: $black;
+
+  @media (min-width: $pad) {
+    margin-bottom: 0;
+  }
+}
+
+.page-footer__social {
+  margin-bottom: 39px;
+
+  @media (min-width: $pad) {
+    margin-bottom: 0;
+    margin-left: -6px;
+  }
 }
