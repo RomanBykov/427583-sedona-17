@@ -13,11 +13,30 @@
 }
 
 .advantages__description {
-  padding: 40px 15px 39px;
+  max-width: 436px;
+  margin: 0 auto;
+  padding: 40px 27px 39px;
 
   @media (min-width: $pad) {
     width: 256px;
     padding-top: 46px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 400px;
+    padding: 53px 67px 39px;
+  }
+}
+
+.advantages__wrapper--blue:nth-child(1) .advantages__description {
+  padding-top: 78px;
+
+  @media (min-width: $pad) {
+    padding-top: 46px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 53px 67px 39px;
   }
 }
 
@@ -25,6 +44,10 @@
   @media (min-width: $pad) {
     order: 1;
     padding: 45px 48px 39px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 53px 90px 39px;
   }
 }
 
@@ -45,8 +68,7 @@
 .advantages__image {
   display: block;
   width: 100%;
-  max-width: 100%;
-  height: auto;
+  height: 100%;
 
   object-fit: cover;
 }

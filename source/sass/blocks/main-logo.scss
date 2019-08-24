@@ -5,4 +5,10 @@
 
 .main-logo__image {
   margin: 0 auto;
+
+  background: linear-gradient(black 20%, transparent 20% 80%);
+
+  @media (min-width: $pad) {
+    background: none;
+  }
 }

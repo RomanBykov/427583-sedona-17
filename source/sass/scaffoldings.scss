@@ -14,3 +14,19 @@
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+.br-desktop {
+  display: none;
+
+  @media (min-width: $desktop) {
+    display: inline;
+  }
+}
+
+.br-pad {
+  display: none;
+
+  @media (min-width: $pad) {
+    display: inline;
+  }
+}

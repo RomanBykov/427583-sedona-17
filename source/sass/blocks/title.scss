@@ -1,7 +1,7 @@
 .title {
   // margin: 0;
   font-family: $ptsans-bold;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 26px;
   font-weight: 700;
   // font-weight: 400;
@@ -13,11 +13,13 @@
   }
 }
 
-.title--big {
+.title--hashtag {
   font-size: 21px;
 }
 
-.title--large {
+.title--big {
+  font-size: 21px;
+
   @media (min-width: $pad) {
     font-size: 30px;
   }
@@ -26,5 +28,11 @@
 .title--small {
   @media (min-width: $pad) {
     font-size: 14px;
+  }
+}
+
+.title--medium {
+  @media (min-width: $pad) {
+    font-size: 30px;
   }
 }

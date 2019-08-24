@@ -1,0 +1,45 @@
+.promo__title,
+.promo__text {
+  margin: 0;
+}
+
+.promo {
+  padding-top: 35px;
+  padding-bottom: 39px;
+
+  @media (min-width: $pad) {
+    padding-top: 67px;
+    padding-bottom: 40px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 70px;
+    padding-bottom: 83px;
+  }
+}
+
+.promo__text-wrapper {
+  max-width: 440px;
+  margin: 0 auto;
+  margin-bottom: 35px;
+  padding-left: 42px;
+  padding-right: 41px;
+
+  @media (min-width: $pad) {
+    max-width: 500px;
+    margin-bottom: 73px;
+  }
+}
+
+.promo__title {
+  margin-bottom: 27px;
+
+  @media (min-width: $pad) {
+    margin-bottom: 30px;
+  }
+}
+
+.promo__text {
+  line-height: 24px;
+  text-transform: uppercase;
+}

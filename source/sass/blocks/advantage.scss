@@ -10,14 +10,6 @@
 
 .advantage {
   flex-shrink: 0;
-
-  @media (min-width: $pad) {
-    // min-width: 256px;
-  }
-
-  @media (min-width: $desktop) {
-    min-width: 400px;
-  }
 }
 
 .advantage__title {
@@ -26,16 +18,30 @@
   @media (min-width: $pad) {
     margin-bottom: 11px;
   }
+
+  @media (min-width: $desktop) {
+    padding: 0 30px;
+  }
 }
 
 .advantage__title--2nd {
   @media (min-width: $pad) {
     padding: 0 4.5px;
   }
+
+  @media (min-width: $desktop) {
+    padding: 0 10px;
+  }
 }
 
 .advantage__text {
   text-transform: uppercase;
+}
+
+.advantage__text--last-list {
+  @media (min-width: $desktop) {
+    padding: 0 10px;
+  }
 }
 
 .advantage__number {
@@ -61,5 +67,19 @@
 
   @media (min-width: $pad) {
     margin-bottom: 21px;
+  }
+}
+
+.advantage__title-br {
+  display: none;
+
+  @media (min-width: $desktop) {
+    display: inline;
+  }
+}
+
+.advantage__title--last-list {
+  @media (min-width: $desktop) {
+    padding: 0 70px;
   }
 }

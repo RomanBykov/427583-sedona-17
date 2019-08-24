@@ -56,7 +56,6 @@
   }
 
   @media (min-width: $desktop) {
-    // display: flexsnt: center;
     width: 244px;
   }
 }
@@ -69,10 +68,13 @@
 .site-list__item--logo {
   order: 1;
 
+  box-shadow: 0 7px 7px 7px $grey-shadow;
   background-color: $white;
 
   @media (min-width: $pad) {
     order: 0;
+
+    box-shadow: none;
   }
 }
 

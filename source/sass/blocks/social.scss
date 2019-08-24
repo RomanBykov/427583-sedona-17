@@ -2,7 +2,9 @@
   @include reset-list;
 
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  width: 151px;
+  margin: 0 auto;
 }
 
 .social__link {
@@ -13,7 +15,6 @@
 
   width: 46px;
   height: 48px;
-  margin: 0 3px;
 
   background-color: $blue;
   background-position: 50% 50%;

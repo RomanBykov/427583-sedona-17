@@ -1,6 +1,14 @@
+.post__title,
+.post__author,
+.post__like-counter {
+  margin: 0;
+}
+
 .post {
   width: 100%;
   padding: 20px;
+  padding-top: 22px;
+  padding-bottom: 17px;
 
   border-top: 1px solid $grey-line;
   border-bottom: 1px solid $grey-line;
@@ -8,14 +16,18 @@
   @media (min-width: $pad) {
     width: 324px;
     padding: 0;
+
+    border: none;
   }
 
   @media (min-width: $desktop) {
+    position: relative;
+
     width: 400px;
   }
 }
 
-.post:nth-child(1) {
+.post--main {
   @media (min-width: $pad) {
     width: 648px;
   }
@@ -29,7 +41,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 280px;
+  // width: 280px;
+  width: 100%;
   height: 280px;
   margin: 0 auto;
 
@@ -45,7 +58,7 @@
   }
 }
 
-.post:nth-child(1) .post__image-container {
+.post--main .post__image-container {
   @media (min-width: $pad) {
     // width: 648px;
     width: 100%;
@@ -59,4 +72,92 @@
 
 .post__image {
   object-fit: cover;
+}
+
+.post__comment {
+  width: 280px;
+  margin: 0 auto;
+  padding-top: 14px;
+
+  text-align: left;
+
+  @media (min-width: $pad) {
+    display: flex;
+    width: auto;
+    margin: 0;
+    padding: 15px 20px 10px;
+
+    background-color: $grey-bg;
+  }
+
+  @media (min-width: $desktop) {
+    position: absolute;
+    bottom: 0;
+
+    width: 400px;
+
+    color: $white;
+
+    background-color: $black_03;
+  }
+}
+
+.post--main .post__comment {
+  @media (min-width: $pad) {
+    width: 100%;
+  }
+}
+
+.post__title {
+  margin-bottom: 2px;
+
+  font-family: $ptsans-bold;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.post__like {
+  display: flex;
+
+  @media (min-width: $pad) {
+    margin-top: 14px;
+    margin-right: auto;
+    margin-left: 40px;
+  }
+}
+
+.post__like-counter {
+  margin-top: 4px;
+  margin-left: 14px;
+
+  @media (min-width: $pad) {
+    margin-top: 2px;
+    margin-left: 10px;
+
+    font-weight: 700;
+  }
+}
+
+.post__text-wrapper {
+  margin-bottom: 8px;
+
+  @media (min-width: $pad) {
+    width: 180px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 254px;
+  }
+}
+
+.post--main .post__text-wrapper {
+  @media (min-width: $pad) {
+    width: 504px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 1054px;
+  }
 }

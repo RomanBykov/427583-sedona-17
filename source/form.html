@@ -15,14 +15,18 @@
         </button>
         <ul class="main-nav__list site-list site-list--closed">
           <li class="site-list__item">
-            <a class="site-list__link title title--small">Главная</a>
+            <a class="site-list__link title title--small" href="index.html">Главная</a>
           </li>
           <li class="site-list__item">
             <a class="site-list__link title title--small" href="photos.html">Фото и видео</a>
           </li>
           <li class="site-list__item site-list__item--logo">
             <a class="site-list__link site-list__link--logo main-logo" href="#">
-              <img class="main-logo__image" src="img/logo-sedona-mobile.svg" alt="Логотип Седона">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+                <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+                <img class="main-logo__image" src="img/logo-sedona-mobile.svg" alt="Логотип Седона">
+              </picture>
             </a>
           </li>
           <li class="site-list__item">
@@ -33,13 +37,15 @@
           </li>
         </ul>
       </nav>
-      <div class="page-header__background"></div>
+      <div class="page-header__background page-header__background--short"></div>
     </header>
     <main clas="page-main">
       <h1 class="visually-hidden">Добро пожаловать в Седону</h1>
-      <section class="intro">
-        <h2 class="intro__title title">Оставьте свой отзыв</h2>
-        <p class="intro__text">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+      <section class="intro intro--short">
+        <div class="intro__text-wrapper">
+          <h2 class="intro__title title title--medium">Оставьте свой отзыв</h2>
+          <p class="intro__text">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+        </div>
       </section>
       <form class="form" action="https://echo.htmlacademy.ru" method="post">
         <div class="form__layout">
@@ -71,11 +77,15 @@
               <ul class="form__list">
                 <li class="form__list-item">
                   <label class="form__label" for="user-tel">Контактный телефон*:</label>
-                  <input class="form__input" type="tel" name="user-tel" id="user-tel" placeholder="Введите телефон" required>
+                  <div class="form__input-wrapper form__input-wrapper--tel">
+                    <input class="form__input" type="tel" name="user-tel" id="user-tel" placeholder="Введите телефон" required>
+                  </div>
                 </li>
                 <li class="form__list-item">
                   <label class="form__label" for="user-email">Электронная почта*:</label>
-                  <input class="form__input" type="email" name="user-email" id="user-email" placeholder="Введите e-mail" required>
+                  <div class="form__input-wrapper form__input-wrapper--email">
+                    <input class="form__input" type="email" name="user-email" id="user-email" placeholder="Введите e-mail" required>
+                  </div>
                 </li>
               </ul>
               </fieldset>
@@ -83,9 +93,9 @@
           <div class="form__wrapper form__wrapper--expression">
             <fieldset class="form__fieldset">
               <legend class="form__legend title">Ваше общее впечатление:</legend>
-              <ul class="form__list">
+              <ul class="form__list form__list--expression">
                 <li class="form__list-item">
-                  <input class="form__input form__input--hidden" type="radio" name="rating" value="good" id="rating-good">
+                  <input class="form__input form__input--hidden" type="radio" name="rating" value="good" id="rating-good" checked>
                   <label class="form__label form__label--radio" for="rating-good">Скорее положительное</label>
                 </li>
                 <li class="form__list-item">
@@ -104,20 +114,20 @@
               <legend class="form__legend title">Посещенные достопримечательности:</legend>
               <ul class="form__list form__list--signs">
                 <li class="form__list-item">
+                  <input class="form__input form__input--hidden" type="checkbox" name="sight" value="devils-bridge" id="sight-devils-bridge" checked>
                   <label class="form__label form__label--checkbox" for="sight-devils-bridge">Мост Дьявола</label>
-                  <input class="form__input form__input--hidden" type="checkbox" name="sight" value="devils-bridge" id="sight-devils-bridge">
                 </li>
                 <li class="form__list-item">
+                  <input class="form__input form__input--hidden" type="checkbox" name="sight" value="mountain-bell" id="sight-mountain bell" checked>
                   <label class="form__label form__label--checkbox" for="sight-mountain bell">Гора-Колокол</label>
-                  <input class="form__input form__input--hidden" type="checkbox" name="sight" value="mountain-bell" id="sight-mountain bell">
                 </li>
                 <li class="form__list-item">
+                  <input class="form__input form__input--hidden" type="checkbox" name="sight" value="slide-park" id="sight-slide-park" checked>
                   <label class="form__label form__label--checkbox" for="sight-slide-park">Слайд-парк</label>
-                  <input class="form__input form__input--hidden" type="checkbox" name="sight" value="slide-park" id="sight-slide-park">
                 </li>
                 <li class="form__list-item">
-                  <label class="form__label form__label--checkbox" for="sight-red-mountains">Красные скалы</label>
                   <input class="form__input form__input--hidden" type="checkbox" name="sight" value="red-mountains" id="sight-red-mountains">
+                  <label class="form__label form__label--checkbox" for="sight-red-mountains">Красные скалы</label>
                 </li>
               </ul>
             </fieldset>
@@ -126,17 +136,20 @@
         <div class="form__wrapper form__wrapper--feedback">
           <fieldset class="form__fieldset">
             <label class="form__label form__label--feedback title" for="feedback">Опишите свои эмоции:</label>
-            <textarea class="form__feedback title" name="feedback" id="feedback" cols="30" rows="10" placeholder="Опишите подробно все свои восторги"></textarea>
+            <textarea class="form__feedback" name="feedback" id="feedback" cols="30" rows="5" placeholder="Опишите подробно все свои восторги"></textarea>
           </fieldset>
         </div>
-        <div class="form__btn-wrapper">
-          <button class="form__submit-btn button" type="submit">Отправить отзыв</button>
+        <div class="form__submit-block">
+            <div class="form__btn-wrapper">
+              <button class="form__submit-btn button" type="submit">Отправить отзыв</button>
+            </div>
+            <p class="form__tips">* — обязательные поля</p>
         </div>
       </form>
     </main>
     <footer class="page-footer">
       <div class="page-footer__wrapper">
-        <a class="page-footer__hashtag title title--big" href="#">#visitsedona</a>
+        <a class="page-footer__hashtag title title--hashtag" href="#">#visitsedona</a>
         <div class="page-footer__social social">
           <ul class="social__list">
             <li class="social__item">
