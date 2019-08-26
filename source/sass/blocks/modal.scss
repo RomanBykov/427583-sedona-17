@@ -4,20 +4,21 @@
 }
 
 .modal {
-  position: fixed;
-  top: 50%;
-  left: 50%;
+  // position: fixed;
+  // top: 50%;
+  // left: 50%;
+  position: relative;
   z-index: 4;
 
   width: 320px;
   min-height: 280px;
-  padding: 35px 52px;
+  padding: 35px 0;
   padding-top: 40px;
 
   background-color: $white;
   box-shadow: 0 7px 15px 0 rgba(0, 1, 1, 0.15);
 
-  transform: translate(-50%, -50%);
+  // transform: translate(-50%, -50%);
 }
 
 .modal--error {
@@ -26,6 +27,10 @@
     padding: 49px 61px;
     padding-top: 53px;
   }
+}
+
+.modal__info-container {
+  padding: 0 52px;
 }
 
 .modal--error .modal__header {
@@ -86,8 +91,27 @@
 .modal__btn-wrapper--succes {
   width: 320px;
   margin-top: 33px;
-  margin-left: -52px;
+  // margin-left: -52px;
   padding: 20px;
 
   background-color: $grey;
+
+  @media (min-width: $pad) {
+    width: 640px;
+    padding: 44px 91px;
+    // margin-left: -112px;
+  }
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
