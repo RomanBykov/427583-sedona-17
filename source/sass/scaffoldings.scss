@@ -30,3 +30,16 @@
     display: inline;
   }
 }
+
+.desktop-hidden {
+  display: inline-block;
+  vertical-align: baseline;
+
+  @media (min-width: $desktop) {
+    display: none;
+  }
+}
+
+.none {
+  display: none;
+}

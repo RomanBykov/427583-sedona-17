@@ -52,7 +52,7 @@
           <div class="form__wrapper form__wrapper--name">
             <fieldset class="form__fieldset">
               <legend class="form__legend title">Представьтесь:</legend>
-              <ul class="form__list">
+              <ul class="form__list form__list--name">
                 <li class="form__list-item">
                   <label class="form__label" for="user-name">Имя*:
                     <input class="form__input" type="text" name="user-name" id="user-name" placeholder="Петр" required>
@@ -73,10 +73,12 @@
           </div>
           <div class="form__wrapper form__wrapper--contacts">
             <fieldset class="form__fieldset">
-              <legend class="form__legend title">Контактная информация:</legend>
-              <ul class="form__list">
+              <div class="form__legend-wrapper">
+                <legend class="form__legend form__legend--line title">Контактная информация:</legend>
+              </div>
+              <ul class="form__list form__list--contacts">
                 <li class="form__list-item">
-                  <label class="form__label" for="user-tel">Контактный телефон*:</label>
+                  <label class="form__label" for="user-tel"><span class="desktop-hidden">Контактный</span> телефон*:</label>
                   <div class="form__input-wrapper form__input-wrapper--tel">
                     <input class="form__input" type="tel" name="user-tel" id="user-tel" placeholder="Введите телефон" required>
                   </div>
@@ -111,7 +113,9 @@
           </div>
           <div class="form__wrapper form__wrapper--signs">
             <fieldset class="form__fieldset">
-              <legend class="form__legend title">Посещенные достопримечательности:</legend>
+              <div class="form__legend-wrapper">
+                <legend class="form__legend form__legend--line title">Посещенные достопримечательности:</legend>
+              </div>
               <ul class="form__list form__list--signs">
                 <li class="form__list-item">
                   <input class="form__input form__input--hidden" type="checkbox" name="sight" value="devils-bridge" id="sight-devils-bridge" checked>
@@ -135,7 +139,9 @@
         </div>
         <div class="form__wrapper form__wrapper--feedback">
           <fieldset class="form__fieldset">
-            <label class="form__label form__label--feedback title" for="feedback">Опишите свои эмоции:</label>
+            <div class="form__legend-wrapper">
+              <label class="form__label form__label--feedback form__legend--line title" for="feedback">Опишите свои эмоции:</label>
+            </div>
             <textarea class="form__feedback" name="feedback" id="feedback" cols="30" rows="5" placeholder="Опишите подробно все свои восторги"></textarea>
           </fieldset>
         </div>
@@ -178,6 +184,20 @@
         </div>
       </div>
     </footer>
+    <div class="modal modal--error none">
+      <h3 class="modal__header">Что-то пошло не так!</h3>
+      <p class="modal__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+      <div class="modal__btn-wrapper">
+        <button class="modal__btn button" type="button">ОК</button>
+      </div>
+    </div>
+    <div class="modal modal--succes ">
+      <h3 class="modal__header">Ваш отзыв отправлен!</h3>
+      <p class="modal__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам.<br> В ближайшее время мы опубликуем его на сайте.</p>
+      <div class="modal__btn-wrapper modal__btn-wrapper--succes">
+        <button class="modal__btn button" type="button">Закрыть окно</button>
+      </div>
+    </div>
     <script>
       var menuBtn = document.querySelector('.main-nav__btn');
       var menuList = document.querySelector('.site-list');
